@@ -21,7 +21,7 @@ if (messageForm != null) {
 // console.log('test');
 socket.on('chat-message', (data) => {
     console.log(data);
-    appendMessage(`${data.name} : ${data.message}`);
+    appendMessage(`${data.user.name} : ${data.message}`);
 });
 socket.on('user-connected', (data) => {
     console.log(data);
@@ -29,7 +29,7 @@ socket.on('user-connected', (data) => {
 });
 socket.on('user-disconnected', (data) => {
     console.log(data);
-    appendMessage(`${data} disconnected.`);
+    appendMessage(`${data.name} disconnected.`);
 });
 
 function appendMessage(message) {

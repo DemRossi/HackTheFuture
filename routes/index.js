@@ -1,13 +1,15 @@
 var express = require('express');
 const app = require('../app');
 var router = express.Router();
+const gameController = require('../controllers/game');
 
-const rooms = {};
+// const rooms = {};
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('room', { title: 'Webtech Game', rooms: rooms });
+    res.render('room', { title: 'IMD Game' });
 });
+
 // GET Room
 // router.get('/:room', (req, res) => {
 //     if (rooms[req.body.room] == null) {
