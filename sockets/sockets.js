@@ -22,7 +22,6 @@ let go = (server) => {
         socket.on('disconnect', () => {
             socket.broadcast.emit('user-disconnected', users[socket.id]);
             delete users[socket.id];
-            // socket.broadcast.emit('user-connected', name);
         });
     });
 };
