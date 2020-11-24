@@ -9,19 +9,27 @@ let go = (server) => {
 
     io.on('connection', (socket) => {
         socket.on('new-user', (name) => {
-            users[socket.id] = name;
-            socket.broadcast.emit('user-connected', name);
+            if (Object.keys(users).length) {
+                // not empty
+                users[socket.id] = { name: name, role: 'player' };
+            } else {
+                // empty
+                users[socket.id] = { name: name, role: 'gamemaster' };
+            }
+            console.log(users);
+            socket.broadcast.emit('user-connected', users[socket.id]);
         });
         socket.on('send-chat-message', (message) => {
             // console.log(message);
             socket.broadcast.emit('chat-message', {
                 message: message,
-                name: users[socket.id],
+                user: users[socket.id],
             });
         });
         socket.on('disconnect', () => {
             socket.broadcast.emit('user-disconnected', users[socket.id]);
             delete users[socket.id];
+            console.log(users);
         });
     });
 };

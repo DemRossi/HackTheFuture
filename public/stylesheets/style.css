@@ -1,4 +1,113 @@
 body {
+    font-family: 'IM Fell DW Pica', serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #141415;
+}
+
+h1 {
+    color: #00e0c9;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10%;
+}
+
+h2 {
+    color: #eaeaea;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 12.5%;
+    margin-left: -15%;
+}
+
+section {
+    margin-top: 15%;
+    margin-left: -25%;
+}
+
+#room-container {
+    color: #eaeaea;
+    margin-top: 10%;
+}
+
+#form-container {
+    color: #eaeaea;
+    margin-top: 10%;
+}
+
+#name-index {
+    font-size: 1.75rem;
+    margin-left: -25%;
+}
+
+#join-index {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #00e0c9;
+    margin-left: -25%;
+    margin-bottom: 10%;
+}
+
+#index-input {
+    border-color: #00e0c9;
+    border-radius: 16px;
+    background-color: #eaeaea;
+    color: #00e0c9;
+    height: 40px;
+    width: 200px;
+    margin-left: -25%;
+}
+
+#send-button {
+    border-color: #00e0c9;
+    border-radius: 16px;
+    background-color: transparent;
+    color: #00e0c9;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-left: 2.5%;
+}
+
+/* ROOM */
+#message-container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 10%;
+}
+
+#message-container div {
+    background-color: #ccc;
+    padding: 5px;
+}
+
+#message-container div:nth-child(2n) {
+    background-color: #fff;
+}
+
+#send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    bottom: 0;
+    max-width: 1200px;
+    width: 80%;
+    display: flex;
+    margin-top: -10%;
+}
+
+#message-input {
+    flex-grow: 1;
+    border-color: #00e0c9;
+    border-radius: 16px;
+    background-color: #141415;
+    color: #00e0c9;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* body {
     padding: 0;
     margin: 0;
     display: flex;
@@ -31,4 +140,4 @@ body {
 
 #message-input {
     flex-grow: 1;
-}
+} */
