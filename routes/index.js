@@ -9,7 +9,9 @@ const gameController = require('../controllers/game');
 router.get('/', function (req, res, next) {
     res.render('room', { title: 'IMD Game' });
 });
+// router.post('/game/start', (req, res) => {
 
+// });
 // GET Room
 // router.get('/:room', (req, res) => {
 //     if (rooms[req.body.room] == null) {

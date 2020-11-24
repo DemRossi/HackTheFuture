@@ -2,6 +2,7 @@ const socket = io();
 const messageContainer = document.getElementById('message-container');
 const messageForm = document.getElementById('send-container');
 const messageInput = document.getElementById('message-input');
+const startGame = document.getElementById('start-btn');
 
 if (messageForm != null) {
     const name = prompt('What is your name?');
@@ -25,7 +26,7 @@ socket.on('chat-message', (data) => {
 });
 socket.on('user-connected', (data) => {
     console.log(data);
-    appendMessage(`${data} has joined.`);
+    appendMessage(`${data.name} has joined.`);
 });
 socket.on('user-disconnected', (data) => {
     console.log(data);
@@ -37,3 +38,7 @@ function appendMessage(message) {
     messageElement.innerText = message;
     messageContainer.append(messageElement);
 }
+
+startGame.addEventListener('click', (e) => {
+    e.preventDefault();
+});

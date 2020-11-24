@@ -17,7 +17,7 @@ let go = (server) => {
                 users[socket.id] = { name: name, role: 'gamemaster' };
             }
             console.log(users);
-            socket.broadcast.emit('user-connected', name);
+            socket.broadcast.emit('user-connected', users[socket.id]);
         });
         socket.on('send-chat-message', (message) => {
             // console.log(message);
