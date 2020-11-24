@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #message-container
+  form#send-container
+    input#message-input(type='text')
+    button#send-button(type='submit') Send
